@@ -1,12 +1,16 @@
 public class SafeHouse extends NormalLocation{
     public SafeHouse(Player player) {
-        super(player, "Sığınak",1);
+        super( "Sığınak", 1,player,"Canınızı yenileyebilirsiniz");
+        this.player = player;
     }
 
     @Override
     public boolean onLocation() {
+        getPlayer().Victory();
         System.out.println("Canınız yenilenmiştir.");
-
-        return true;
+        player.setHealth(getPlayer().getMhealth());
+        this.getPlayer().status();
+        getPlayer().where();
+        return false;
     }
 }

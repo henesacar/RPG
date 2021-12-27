@@ -1,5 +1,5 @@
 public abstract class NormalLocation extends Location{
-    public NormalLocation(Player player, String name,int id) {
-        super(player, name,id);
+    public NormalLocation(String name,int id,Player player,String info) {
+        super(name,id,player,info);
     }
 }

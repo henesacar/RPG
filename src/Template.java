@@ -3,14 +3,24 @@ public abstract class Template{
     private int damage;
     private int health;
     private int money;
+    private int block;
     private String sinif;
 
-    public Template(int id,String sinif,int damage, int health, int money) {
+    public int getBlock() {
+        return block;
+    }
+
+    public void setBlock(int block) {
+        this.block = block;
+    }
+
+    public Template(int id, String sinif, int damage, int health, int money, int block) {
         this.damage = damage;
         this.health = health;
         this.money = money;
         this.sinif = sinif;
         this.id=id;
+        this.block=block;
     }
 
     public int getDamage() {

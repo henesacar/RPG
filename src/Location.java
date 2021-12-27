@@ -1,15 +1,25 @@
 import java.util.Scanner;
 
 public abstract class Location {
-    private Player player;
+    protected Player player;
     private String name;
     private  int id;
+    private String info;
     protected Scanner scn = new Scanner(System.in);
 
-    public Location(Player player, String name,int id) {
-        this.player = player;
+    public Location(String name,int id,Player player,String info) {
         this.name = name;
         this.id = id;
+        this.player=player;
+        this.info=info;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 
     public Player getPlayer() {
@@ -38,4 +48,4 @@ public abstract class Location {
 
     public abstract boolean onLocation();
 
-}
+    }
